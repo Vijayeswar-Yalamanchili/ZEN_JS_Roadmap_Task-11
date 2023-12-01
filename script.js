@@ -6,7 +6,6 @@ fetch("https://restcountries.com/v3.1/all")
             const div = document.createElement("div");
             let lat = `${ele[i].latlng[0]}`;
             let long = `${ele[i].latlng[1]}`;
-            // div.classList.add("container","d-flex" , "flex-row")
             div.setAttribute("class","container")
             div.innerHTML = `
                 <div class="row">
