@@ -1,0 +1,25 @@
+body{
+    background-color: black !important;
+}
+
+#title, #description{
+    color: white;
+}
+
+.card{
+    width: 300px;
+    height: auto;
+}
+.lits{
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+
+.cardHeader{
+    color: white;
+    text-transform: uppercase;
+    text-align: center !important;
+}
+
