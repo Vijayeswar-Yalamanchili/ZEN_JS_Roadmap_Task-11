@@ -5,11 +5,11 @@ fetch("https://restcountries.com/v3.1/all")
             // console.log(ele[i].name.common);
             const div = document.createElement("div");
             let lat = `${ele[i].latlng[0]}`;
-            let long = `${ele[i].latlng[1]}`;
+            let long = `${ele[i].latlng[1].toFixed(2)}`;
             // div.classList.add("container","d-flex" , "flex-row")
             div.setAttribute("class","container")
             div.innerHTML = `
-            <div class = "row">
+            <div class = "row d-flex flex-row">
                 <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 g-5">
                     <div class="card h-100 w-auto" style="width: 18rem;" id="card">
                         <div class="card-header text-center" id="country-name">${ele[i].name.common}</div>
@@ -19,6 +19,7 @@ fetch("https://restcountries.com/v3.1/all")
                             <div class="card-text"><b>Country-code : </b>${ele[i].altSpellings[0]}</div>
                             <div class="card-text"><b>Capital : </b>${ele[i].capital}</div>
                             <div class="card-text"><b>Population : </b>${ele[i].population}</div>
+                            <div class="card-text"><b>LatLng : </b>${lat},${long}</div>
                             <div id="${ele[i].name.common}"></div>
                         </div>
                             <div class="card-footer d-flex justify-content-center">

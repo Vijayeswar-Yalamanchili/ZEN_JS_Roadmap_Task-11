@@ -6,7 +6,9 @@ body{
     color: white;
 }
 
-.card{
+
+
+/* .card{
     width: 300px;
     height: auto;
 }
@@ -14,11 +16,9 @@ body{
     display: flex;
     flex-direction: row !important;
     justify-content: space-around;
-    /* align-items: center; */
 }
 
-.cardHeader{
-    color: white;
+.card-header{
     text-transform: uppercase;
     text-align: center !important;
 }
@@ -26,4 +26,4 @@ body{
 .card-img-top{
     margin-bottom: 10px;
     border: 0.5px solid black;
-}
+} */
