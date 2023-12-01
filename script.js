@@ -24,23 +24,19 @@ fetch("https://restcountries.com/v3.1/all")
                 </div>`;
             document.body.append(div);
         }       
-    });
-
-    function weather( lat, long) {
-        console.log("yes");
-        let apiKey = 'c3a878b7af8cd7df27b3a0a62c548e7a';
-        // return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid={c3a878b7af8cd7df27b3a0a62c548e7a}`)
-        return fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`)
-        .then((data1)=> data1.json())
-        .then((data)=> {
-            alert (` 
-                Current Humidity is ${data.main.humidity}
-                Current Pressure is ${data.main.pressure}
-                Current Temperature is ${data.main.temp}`)
-        })
-            
-        .catch((err)=> console.log(err))
     }
+);
 
-
-    
+function weather( lat, long) {
+    let apiKey = 'c3a878b7af8cd7df27b3a0a62c548e7a';
+    return fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`)
+    .then((data1)=> data1.json())
+    .then((data)=> {
+        alert (` 
+            Current Humidity is ${data.main.humidity}
+            Current Pressure is ${data.main.pressure}
+            Current Temperature is ${Math.round(data.main.temp-273)}`
+        )}
+    )
+    .catch((err)=> console.log(err))
+}
