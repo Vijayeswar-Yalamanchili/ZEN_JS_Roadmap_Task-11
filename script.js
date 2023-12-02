@@ -9,7 +9,7 @@ fetch("https://restcountries.com/v3.1/all")
             // div.classList.add("container","d-flex" , "flex-row")
             div.setAttribute("class","container")
             div.innerHTML = `
-            <div class = "row d-flex flex-row">
+            <div class = "row">
                 <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 g-5">
                     <div class="card h-100 w-auto" style="width: 18rem;" id="card">
                         <div class="card-header text-center" id="country-name">${ele[i].name.common}</div>
